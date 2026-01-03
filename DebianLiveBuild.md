@@ -41,10 +41,18 @@ sudo ./build.sh https://github.com/BlankOn/blankon-live-build verbeek
 - `config/source` - Package source configuration
 - `config/archives/blankon.key.binary` and `config/archives/blankon.key.chroot` - Initially the `lb` will try to use the keyring package from `--keyring-packages blankon-keyring` argument, but in some cases, especially in chroot reconfiguration, these package is still missing and these `blankon.key.*` will serve as backup.
 - `config/bootloaders` - Boot loader configuration, currently using GRUB with custom background (`config/bootloaders/grub-legacy/splash.xpm.gz`)
-- `config/hooks` - Small modifications to the system will be maintained here. If a modification is heavily tied to certain packages, then these packages should be updated instead. Smaller number will be executed first. Higher number will override the smaller ones.
+- `config/hooks` - Higher number will override the smaller ones.
   - `config/hooks/live` - The hooks that will be executed when the OS booted in live session.
   - `config/hooks/normal` - The hooks that will be executed during the ISO build process
 - `config/package-lists/live.list.chroot` - The list of the package that will be prepared for live session. There are live session specific packages listed here like `live-boot`, `live-config`, `live-config-systemd`
+
+## Hooks vs Packaging
+
+Small modifications that related to system wide will be maintained in `config/hooks`. If a modification is heavily tied to certain packages, then these packages should be updated instead.
+
+Example:
+- We should alter the distribution name and remove irrelevant files in `/etc` that may cause problems --> Alter them with hook.
+- We have broken LibreOffice package that could be solved with small file modification. --> Patch LibreOffice and repackage through IRGSH.
 
 ## What are important to setup / package / modify
 
