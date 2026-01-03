@@ -59,6 +59,10 @@ sudo ./build.sh https://github.com/BlankOn/blankon-live-build verbeek
   - Default services
 - System convention
   - Default font, etc
+ 
+## What to test
+
+- ?
 
 # References
 
