@@ -23,6 +23,8 @@ Requirement / metric:
 
 ## Release Candidate
 
+At this point, we need to freeze the development repo (arsip-dev) by disabling synchronization against Sid. This will ensure no more bugs are introduced by new packages from Sid.
+
 Requirement / metric:
 1. The distro can be installed.
 2. Branding should be done.
@@ -47,4 +49,4 @@ Requirement / metric:
 If there is an important bug or security issues within the package in the ISO images, then we will release new ISO image with minor version being increased, e.g. from v12.0 to v12.1.
 ## Start over a new arsip-dev for the next release
 
-Back to `Repository Initialization and Sync` section.
+Back to `Repository Initialization and Sync` section. Repeat.
