@@ -18,7 +18,8 @@ This document needs to be improved to be a guide on how to do the rebranding, no
 ## Desktop
 1. Live session booting background
 2. Desktop background
-3. GDM background
+  - Reuse this background from Tambora release: https://github.com/BlankOn/blankon-tambora-kesenian/blob/master/gambar-latar/piko/bukit.png
+4. GDM background
 3. Default user profile image
 4. GNOME Setttings's About Page
   - Please check Operating System Identity and Profile section above
